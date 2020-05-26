@@ -1,5 +1,13 @@
 # Container Base Image - Alpine
 
+```shell
+docker pull alpine
+```
+
+## Usage
+```Dockerfile
+FROM alpine:latest
+```
 ## Install componants
 ```shell
 apk update && \\

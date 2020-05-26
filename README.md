@@ -16,8 +16,11 @@
 
 # Languages
 1. [dotnet-core](/language/dotnet-core/README.md)
-1. [java](/language/java/README.md)
-1. [nodejs](/language/nodejs/README.md)
-1. [rust](/language/rust/README.md)
+2. [java](/language/java/README.md)
+3. [nodejs](/language/nodejs/README.md)
+4. [rust](/language/rust/README.md)
 
 # tools
+
+1. [nginx](/tools/nginx/README.md)
+2. [sonarqube](/tools/sonarqube/README.md)
