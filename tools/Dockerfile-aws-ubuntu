@@ -1,0 +1,5 @@
+FROM ubuntu:latest
+ENV ReleaseName=bionic
+RUN apt update && apt install awscli -y
+RUN adduser --disabled-password --gecos '' aws
+USER aws
