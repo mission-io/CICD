@@ -1,7 +1,7 @@
 # Jenkins CICD pipeline
 
 
-this image is jenkins + docker
+This image is jenkins + docker
 
     mkdir -p /var/jenkins_home
     chown -R 1000:1000 /var/jenkins_home
@@ -12,4 +12,4 @@ this image is jenkins + docker
 Note: Base system needs a docker engine.
     
     usermod -aG docker jenkins
-    chmod 777 /var/run/docker.sock (this socket share for jenkins container and base images)
+    chmod 777 /var/run/docker.sock ( this socket is sharable )
