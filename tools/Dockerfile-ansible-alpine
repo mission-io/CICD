@@ -1,0 +1,5 @@
+FROM alpine
+RUN addgroup -S ansible && adduser -S ansible -G ansible
+RUN apk add --update ansible
+RUN rm -rf /var/cache/apk/*
+USER ansible
