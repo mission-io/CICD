@@ -1,9 +1,6 @@
 # AWS CICD
 
-## AWS CLI Examples
 [AWS Cli - Examples](https://github.com/aws/aws-cli/tree/develop/awscli/examples)
-
-
 
 [Dockerfile](https://github.com/mission-io/DevOps/blob/dev/cloud/aws/Dockerfile)
 
