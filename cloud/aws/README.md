@@ -13,3 +13,9 @@
     RUN adduser --disabled-password --gecos '' aws
     RUN apt clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
     USER aws
+
+[How to set environment variables](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html)
+
+    $ export AWS_ACCESS_KEY_ID=AKIAIOSFODNN7EXAMPLE
+    $ export AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+    $ export AWS_DEFAULT_REGION=us-west-2
