@@ -19,6 +19,11 @@
     RUN apt update && apt install awscli -y
     RUN apt clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
     
+
+Usage
+
+    $ docker build -t mission/aws:v1 .
+    $ docker run -d mission/aws:v1
     
 
 [How to set environment variables](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html)
@@ -27,7 +32,3 @@
     $ export AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
     $ export AWS_DEFAULT_REGION=us-west-2
 
-Usage
-
-    $ docker build -t mission/aws:v1 .
-    $ docker run -d mission/aws:v1
