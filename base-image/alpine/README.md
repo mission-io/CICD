@@ -7,10 +7,24 @@
 docker pull alpine
 ```
 
+## Run bash
+```shell
+$ docker run [--rm] -it alpine /bin/sh
+
+# --rm   will remove the container after exit
+```
+
 ## Usage
+
 ```Dockerfile
 FROM alpine:latest
 ```
+
+## Rust add target
+```shell
+rustup target add x86_64-unknown-linux-musl
+```
+
 ## Install componants
 ```shell
 apk update && \\
