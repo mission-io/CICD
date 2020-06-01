@@ -3,9 +3,6 @@
 [AWS Cli - Examples](https://github.com/aws/aws-cli/tree/develop/awscli/examples)
 
 
-    # PRODUCTION ENVIRONMENT
-
-
 [Dockerfile](https://github.com/mission-io/DevOps/blob/dev/cloud/aws/Dockerfile)
 
     FROM ubuntu:latest
@@ -16,10 +13,7 @@
  
  
 
-    # DEVELOPMENT ENVIRONMENT
-    
-
-[Dockerfile](https://github.com/mission-io/DevOps/blob/dev/cloud/aws/Dockerfile-dev)
+[Dockerfile-dev](https://github.com/mission-io/DevOps/blob/dev/cloud/aws/Dockerfile-dev)
 
     FROM ubuntu:latest
     RUN apt update && apt install awscli -y
