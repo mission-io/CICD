@@ -3,7 +3,7 @@
 [AWS Cli - Examples](https://github.com/aws/aws-cli/tree/develop/awscli/examples)
 
 
-        # PRODUCTION ENVIRONMENT
+    # PRODUCTION ENVIRONMENT
 
 
 [Dockerfile](https://github.com/mission-io/DevOps/blob/dev/cloud/aws/Dockerfile)
@@ -13,20 +13,19 @@
     RUN adduser --disabled-password --gecos '' aws
     RUN apt clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
     USER aws
+ 
+ 
 
-* note: This images build as non-root privileges. you cannot install any other packages.
-
-
-        # DEVELOPMENT ENVIRONMENT    
-
+    # DEVELOPMENT ENVIRONMENT
+    
 
 [Dockerfile](https://github.com/mission-io/DevOps/blob/dev/cloud/aws/Dockerfile-dev)
 
     FROM ubuntu:latest
     RUN apt update && apt install awscli -y
     RUN apt clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-
-* note: This images build root privileges. you can install any other packages.
+    
+    
 
 [How to set environment variables](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html)
 
