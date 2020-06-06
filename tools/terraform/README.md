@@ -3,17 +3,15 @@
 
 Dockerfile
 
-    FROM alpine
-    ENV TERRAFORM_VERSION=0.12.26
-    RUN addgroup -S terraform && adduser -S terraform -G terraform
-    RUN apk update
-    RUN apk add make curl bash unzip  wget git
-    RUN ln -sf /usr/share/zoneinfo/Etc/UTC /etc/localtime
-    RUN cd /tmp && \
-        wget https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip && \
-        unzip terraform_${TERRAFORM_VERSION}_linux_amd64.zip -d /usr/bin && \
-        rm -rf /tmp/* && \
-        rm -rf /var/cache/apk/* && \
-        rm -rf /var/tmp/*
-    USER terraform
-    CMD ["/bin/bash"]
+        FROM alpine
+        ENV TERRAFORM_VERSION=0.12.25
+        RUN addgroup -S terraform && adduser -S terraform -G terraform
+        RUN apk update && \
+            apk add curl jq python bash ca-certificates git openssl unzip wget && \
+            cd /tmp && \
+            wget https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip && \
+            unzip terraform_${TERRAFORM_VERSION}_linux_amd64.zip -d /usr/bin && \
+            rm -rf /tmp/* && \
+            rm -rf /var/cache/apk/* && \
+            rm -rf /var/tmp/*
+        USER terraform
