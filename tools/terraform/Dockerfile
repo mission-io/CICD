@@ -10,3 +10,4 @@ RUN apk update && \
     rm -rf /var/cache/apk/* && \
     rm -rf /var/tmp/*
 USER terraform
+CMD [/bin/bash]
