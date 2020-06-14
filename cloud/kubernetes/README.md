@@ -1,6 +1,6 @@
 # Kubernetes Cloud
 
-ubuntu Non-Privileges User
+# ubuntu Non-Privileges User
 
     FROM ubuntu:latest
     ENV helm_version=3.1.3
@@ -13,7 +13,7 @@ ubuntu Non-Privileges User
     USER kubernetes
     CMD [/bin/bash]
  
- ubuntu Privileges User
+ # ubuntu Privileges User
  
     FROM ubuntu:latest
     ENV helm_version=3.1.3
@@ -25,7 +25,7 @@ ubuntu Non-Privileges User
     RUN apt clean && rm -rf /tmp/* 
     CMD [/bin/bash]
     
-Alpine non-privileges user
+# Alpine non-privileges user
 
     FROM alpine
     RUN addgroup -S kubernetes && adduser -S kubernetes -G kubernetes
@@ -38,7 +38,7 @@ Alpine non-privileges user
     USER kubernetes
     CMD [/bin/bash]
     
-Alpine privileges user
+# Alpine privileges user
 
 
     FROM alpine
@@ -50,3 +50,8 @@ Alpine privileges user
     RUN chmod +x kubectl && mv kubectl /usr/local/bin && mv /tmp/linux-amd64/helm /usr/local/bin/
     RUN rm -rf /tmp/* 
     CMD [/bin/bash]
+
+
+# Multi cloud Setup
+[Cloud Controller Manager](https://cloudyuga.guru/blog/cloud-controller-manager)
+[Pull image from GCR](https://medium.com/hackernoon/today-i-learned-pull-docker-image-from-gcr-google-container-registry-in-any-non-gcp-kubernetes-5f8298f28969)
