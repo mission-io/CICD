@@ -22,7 +22,8 @@
 
 # Tools
 1. [Ansible](/tools/ansible/README.md)
-2. [Krakend](/tools/api-gateway/krakend/README.md)
+2. [Api Gateway](/tools/api-gateway/README.md)
+    1. [Krakend](/tools/api-gateway/krakend/README.md)
 3. [NGINX](/tools/nginx/README.md)
 4. [Prometheus](/tools/prometheus/README.md)
 5. [Sonarqube](/tools/sonarqube/README.md)
