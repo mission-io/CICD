@@ -11,6 +11,6 @@ RUN apt update && apt install -y azure-cli
 RUN apt clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 RUN adduser --disabled-password --gecos '' azure
 USER azure
-COPY --chown=azure jino.sh /home/azure/loginInit.sh
+COPY --chown=azure test.sh /home/azure/loginInit.sh
 RUN chmod +x /home/azure/loginInit.sh
 CMD ["/home/azure/loginInit.sh"]
