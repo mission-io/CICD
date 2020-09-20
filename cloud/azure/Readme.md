@@ -18,5 +18,5 @@ Azure command line authentication
     Command Line login approaches ( select 1 option ):
     
     1. az login --service-principal -u a807906d-3cbc-xxxxx-ae2f-xxxxxxxxxx -p C9~UhyOOnK5p8gJL.4NH~6Aekfu_9-uzm4 --tenant xxxxx833fc-xxxx-49c9-9c53-xxxxxx    
-    2. az login --service-principal -u http://demonio -p C9~xxxxxxxx.4NH~6Aekfu_9-uzm4 --tenant xxxxxxxxgmail.onmicrosoft.com
-    3. az login --service-principal -u http://demonio -p C9~xxxxxxxx.4NH~6Aekfu_9-uzm4 --tenant xxxxx833fc-xxxx-49c9-9c53-xxxxxx
+    2. az login --service-principal -u http://demoazureroute -p C9~xxxxxxxx.4NH~6Aekfu_9-uzm4 --tenant xxxxxxxxgmail.onmicrosoft.com
+    3. az login --service-principal -u http://demoazureroute -p C9~xxxxxxxx.4NH~6Aekfu_9-uzm4 --tenant xxxxx833fc-xxxx-49c9-9c53-xxxxxx
