@@ -46,10 +46,10 @@ version: 0.2
 env:
   variables:
     LATEST_TAG: "latest"
-    AWS_ACCESS_KEY_ID: "AKIAUU73DHJ24BSOI574"
+    AWS_ACCESS_KEY_ID: ""
     AWS_SECRET_ACCESS_KEY: ""
     DEFAULT_REGION_NAME: "us-east-2"
-    ECR_PATH: "319964789365.dkr.ecr.us-east-2.amazonaws.com"
+    ECR_PATH: ""
     PROJECT_NAME: "BookSession"
     CONTAINER_NAME: "book-session"
     
