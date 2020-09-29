@@ -35,12 +35,12 @@ Usage
     $ export AWS_DEFAULT_REGION=us-west-2
 ```
 
-Create ECR Repo
+## Create ECR Repo
 ```shell
 aws ecr create-repository --repository-name book-session
 ```
 
-AWS sample `buildspec.yml` file
+## AWS sample `buildspec.yml` file
 ```yml
 version: 0.2
 env:
@@ -86,7 +86,11 @@ artifacts:
 ```
 
 
-Trigger Code Build in AWS
+## Trigger Code Build in AWS
 ```shell
 aws codebuild start-build --project-name BookSession
+```
+## Delete Build project 
+```shell
+aws codebuild delete-project --name  BookSession
 ```
