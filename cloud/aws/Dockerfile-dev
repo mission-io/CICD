@@ -1,0 +1,3 @@
+FROM ubuntu:latest
+RUN apt update && apt install awscli -y
+RUN apt clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*

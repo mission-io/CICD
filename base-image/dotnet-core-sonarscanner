@@ -1,0 +1,80 @@
+#######################################################
+# Step 1: Build the application in a container        #
+#######################################################
+# Download the official ASP.NET Core SDK image
+# to build the project while creating the docker image
+
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1 as build
+
+# Passing Arguments
+ARG SONAR_PROJECT_KEY=test
+ARG SONAR_OGRANIZAION_KEY=worldbank
+ARG SONAR_HOST_URL=http://xxx.xxx.xxx.xxx:9000
+ARG SONAR_TOKEN=9a3a91fbfa666ad5196d6e6ac5928bbe3adbfdc4
+
+WORKDIR /app
+
+# Install Sonar Scanner, Coverlet and Java (required for Sonar Scanner)
+RUN apt-get update && apt-get install -y openjdk-11-jdk -qq
+RUN dotnet tool install --global dotnet-sonarscanner
+RUN dotnet tool install --global coverlet.console
+ENV PATH="$PATH:/root/.dotnet/tools"
+
+# Start Sonar Scanner
+RUN dotnet sonarscanner begin \
+  /k:"$SONAR_PROJECT_KEY" \
+  /d:sonar.host.url="$SONAR_HOST_URL" \
+  /d:sonar.login="$SONAR_TOKEN" 
+
+# RUN dotnet sonarscanner begin \
+#   /k:"$SONAR_PROJECT_KEY" \
+#   /o:"$SONAR_OGRANIZAION_KEY" \
+#   /d:sonar.host.url="$SONAR_HOST_URL" \
+#   /d:sonar.login="$SONAR_TOKEN" \
+#   /d:sonar.cs.opencover.reportsPaths=/coverage.opencover.xml
+
+# Restore NuGet packages
+COPY *.csproj .
+RUN dotnet restore
+
+# Copy the rest of the files over
+COPY . .
+
+# Build and test the application
+RUN dotnet publish \
+    -c Release \
+    -r alpine-x64 \
+    --self-contained true \
+    /p:PublishTrimmed=true \
+    -o ./publish
+
+# RUN dotnet test \
+#   /p:CollectCoverage=true \
+#   /p:CoverletOutputFormat=opencover \
+#   /p:CoverletOutput="/coverage"
+
+# End Sonar Scanner
+RUN dotnet sonarscanner end /d:sonar.login="$SONAR_TOKEN"
+
+#######################################################
+# Step 2: Run the build outcome in a container        #
+#######################################################
+# to run the compiled application in alpine image
+
+FROM alpine:3.9.4
+RUN apk add --no-cache libstdc++ libintl icu
+RUN apk add --no-cache \ 
+    openssh libunwind \
+    nghttp2-libs libidn krb5-libs libuuid lttng-ust zlib \
+    libstdc++ libintl \
+    icu
+WORKDIR /app
+
+# Open port
+EXPOSE 8080
+
+# Copy the build output from the SDK image
+COPY --from=build /app/publish ./
+
+# Start the application
+ENTRYPOINT ["./BackendService2", "--urls", "http://0.0.0.0:8080"]
