@@ -1,7 +1,9 @@
 # Kubernetes Cloud
 
-# ubuntu Non-Privileges User
+[Troubleshooting Kubernetes Deployments](https://learnk8s.io/troubleshooting-deployments)
 
+# ubuntu Non-Privileges User
+```Dockerfile
     FROM ubuntu:latest
     ENV helm_version=3.1.3
     RUN apt update && apt-get install -y curl tar wget
@@ -12,9 +14,9 @@
     RUN apt clean && rm -rf /tmp/* 
     USER kubernetes
     CMD [/bin/bash]
- 
+ ```
  # ubuntu Privileges User
- 
+ ```Dockerfile
     FROM ubuntu:latest
     ENV helm_version=3.1.3
     RUN apt update && apt-get install -y curl tar wget
@@ -24,9 +26,9 @@
     RUN adduser --disabled-password --gecos '' kubernetes
     RUN apt clean && rm -rf /tmp/* 
     CMD [/bin/bash]
-    
+```    
 # Alpine non-privileges user
-
+```Dockerfile
     FROM alpine
     RUN addgroup -S kubernetes && adduser -S kubernetes -G kubernetes
     ENV helm_version=3.1.3
@@ -37,10 +39,10 @@
     RUN rm -rf /tmp/* 
     USER kubernetes
     CMD [/bin/bash]
-    
+```   
 # Alpine privileges user
 
-
+```Dockerfile
     FROM alpine
     RUN addgroup -S kubernetes && adduser -S kubernetes -G kubernetes
     ENV helm_version=3.1.3
@@ -50,7 +52,7 @@
     RUN chmod +x kubectl && mv kubectl /usr/local/bin && mv /tmp/linux-amd64/helm /usr/local/bin/
     RUN rm -rf /tmp/* 
     CMD [/bin/bash]
-
+```
 
 # Multi cloud Setup
 [Cloud Controller Manager](https://cloudyuga.guru/blog/cloud-controller-manager)
