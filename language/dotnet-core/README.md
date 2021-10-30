@@ -37,8 +37,6 @@ ENTRYPOINT ["./ContainerSample", "--urls", "http://localhost:5000"]
 
 ```
 
-
-
-
 # Reference
-1. [Build Smaller and Secure Docker Image`](https://thorsten-hans.com/how-to-build-smaller-and-secure-docker-images-for-net5)
+1. [Build Smaller and Secure Docker Image`](https://thorsten-hans.com/how-to-build-smaller-and-secure-docker-images-for-net5) 
+2. [Instrumenting ASP.NET Core Application For Exporting Metrics to Prometheus](https://www.c-sharpcorner.com/article/instrumenting-asp-net-core-application-for-exporting-metrics-to-prometheus/)
