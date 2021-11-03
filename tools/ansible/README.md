@@ -1,3 +1,20 @@
+# Ansible
+
+
+### Inventry file
+```path = /etc/ansible/hosts```
+
+ansible_host = server1.company.com
+ansible_connection = ssh/winrm/localhost
+ansible_port = 22/5986
+ansible_user = root/administrator
+ansible_ssh_pass = Password
+
+Security = Ansible vault
+
+### Execute Ansible 
+
+ansible target1 -m ping  -i inventry.txt
 
 Ansible Alpine image
 
