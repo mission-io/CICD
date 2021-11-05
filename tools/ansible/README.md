@@ -1,6 +1,29 @@
 # Ansible
 
 
+### Help
+
+### Ansible Commands
+```
+ansible <hosts> -a command
+ansible all -a "/sbin/reboot"
+
+
+ansible <hosts> -m <module>
+ansible all -m ping
+
+```
+
+### Ansible Playbook commands
+
+```
+ansible-doc -l
+
+ansible-playbook playbook.yml
+
+ansible-playbook --help
+```
+
 ### Inventry file
 ```path = /etc/ansible/hosts```
 
