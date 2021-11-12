@@ -64,3 +64,5 @@ pipelines:
 
   ```
   
+### [Built in Bitbucket Variables](https://support.atlassian.com/bitbucket-cloud/docs/variables-and-secrets/)
+  
