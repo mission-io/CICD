@@ -5,7 +5,10 @@ It covers the following
 1. Maven build
 2. Push the artifacts to github 
 3. How to skip build if we commit the verson change from CI process
-4. Bitbucket shared/reuse stepes [Ref](https://support.atlassian.com/bitbucket-cloud/docs/yaml-anchors/)
+4. Bitbucket shared/reuse stepes ([ref](https://support.atlassian.com/bitbucket-cloud/docs/yaml-anchors/)) & scripts ([ref](https://community.atlassian.com/t5/Bitbucket-questions/Bitbucket-pipeline-reuse-of-code/qaq-p/1134797))
+5. Security Scan
+6. File Upload and Download from Bitbucket download sections.
+7. Install maven dependencies
 
 ```yaml
 image: maven:3.8.1-jdk-8
