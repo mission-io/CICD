@@ -14,6 +14,7 @@
 2. [Java](/language/java/README.md)
 3. [Node JS](/language/nodejs/README.md)
 4. [Rust](/language/rust/README.md)
+5. [Python](/language/python/README.MD)
 
 # Pipeline
 1. [Bitbucket](/pipeline/bitbucket/README.md)

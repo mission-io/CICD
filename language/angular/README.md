@@ -18,3 +18,8 @@ ENV NODE_OPTIONS=--max_old_space_size=2048
 ```
 
 [Example Dockerfile for Angular project](./Dockerfile)
+
+## Angular 1.x to Container - Prerequisite
+
+1. File name and folder name should be lower case due to linux os support. (Linux path is case sensitive)
+2. 
