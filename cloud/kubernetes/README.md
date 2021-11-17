@@ -1,5 +1,12 @@
 # Kubernetes Cloud
 
+### Basic Commands
+
+```sh
+kubectl exec -it <pod-name> -- [sh | bin/sh | bin/bash]
+
+```
+
 [Troubleshooting Kubernetes Deployments](https://learnk8s.io/troubleshooting-deployments)
 
 # ubuntu Non-Privileges User
