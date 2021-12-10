@@ -42,3 +42,4 @@ ENTRYPOINT ["./ContainerSample", "--urls", "http://localhost:5000"]
 
 # Reference
 1. [Build Smaller and Secure Docker Image`](https://thorsten-hans.com/how-to-build-smaller-and-secure-docker-images-for-net5)
+2. [Dockerfile Sample](https://medium.com/01001101/containerize-your-net-core-app-the-right-way-35c267224a8d)
