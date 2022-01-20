@@ -28,8 +28,9 @@ kubectl get nodes
 
 ### 3. NGINX Ingress controller installation
 
-[using Helm](https://docs.nginx.com/nginx-ingress-controller/installation/installation-with-helm/)
-[using Kubectl](https://docs.nginx.com/nginx-ingress-controller/installation/installation-with-manifests/)
+1. [using Helm](https://docs.nginx.com/nginx-ingress-controller/installation/installation-with-helm/)
+2. [using Kubectl](https://docs.nginx.com/nginx-ingress-controller/installation/installation-with-manifests/)
+3. 
 
 ### 4. Create an image pull secret
 [Create an image pull secret](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-auth-kubernetes#:~:text=your%20service%20principal.-,Create%20an%20image%20pull%20secret,password%2C%20and%20the%20registry%20URL.)
@@ -43,3 +44,10 @@ kubectl create secret docker-registry <secret-name> \
     --docker-password=<service-principal-password>
  
  ```
+### 5 . Install certificate for ingress
+
+```shell
+
+	kubectl create secret tls aks-ingress-tls --key server.key --cert server.crt
+
+```
