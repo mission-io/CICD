@@ -89,3 +89,34 @@ spec:
             port:
               number: 80
 ```
+### 6. CI/CD Pipeline 
+
+#### 1. Manually create a service principal
+
+```
+az ad sp create-for-rbac --name myAKSClusterServicePrincipal
+```
+Response will be
+
+```json
+{
+  "appId": "559513bd-0c19-4c1a-87cd-851a26afd5fc",
+  "displayName": "myAKSClusterServicePrincipal",
+  "name": "http://myAKSClusterServicePrincipal",
+  "password": "e763725a-5eee-40e8-a466-dc88d980f415", # --client-secret
+  "tenant": "72f988bf-86f1-41af-91ab-2d7cd011db48"
+}
+```
+
+#### 2. 
+
+
+#### 3. Specify a service principal for an AKS cluster
+
+```
+az aks create \
+    --resource-group myResourceGroup \
+    --name myAKSCluster \
+    --service-principal <appId> \
+    --client-secret <password>
+```
