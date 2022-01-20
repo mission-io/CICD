@@ -32,13 +32,12 @@ kubectl get nodes
 	1. [using Helm](https://docs.nginx.com/nginx-ingress-controller/installation/installation-with-helm/)
 	2. [using Kubectl](https://docs.nginx.com/nginx-ingress-controller/installation/installation-with-manifests/)
 
-#### Steps to install
-```shell
-
-```
 2. NGINX Ingress Controller Kubernetes reference
 	1. [using Kubectl](https://kubernetes.github.io/ingress-nginx/deploy/#azure)
-	2. [using Helm]() - NA
+#### Steps to install
+```shell
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.1.1/deploy/static/provider/cloud/deploy.yaml
+```
 
 ### 4. Create an image pull secret
 
