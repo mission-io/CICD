@@ -56,12 +56,9 @@ kubectl create secret docker-registry <secret-name> \
 ### 5 . Install certificate for ingress
 
 ```shell
-
-	kubectl create secret tls aks-ingress-tls --key server.key --cert server.crt
-
-# aks-ingress-tls -> spacify this secret name in pod `ingress.yml` -> `spec` -> `tls` -> `secretName` as follows
-
+kubectl create secret tls aks-ingress-tls --key server.key --cert server.crt
 ```
+Spacify secret name `aks-ingress-tls` in `ingress.yml` file.  `spec.tls.secretName = aks-ingress-tls` 
 
 Sample `ingress.yml` file
 
