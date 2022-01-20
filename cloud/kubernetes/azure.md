@@ -89,7 +89,7 @@ spec:
             port:
               number: 80
 ```
-### 6. CI/CD Pipeline 
+### 6. CI/CD Pipeline BY Service principal
 
 #### 1. Manually create a service principal
 
@@ -108,10 +108,7 @@ Response will be
 }
 ```
 
-#### 2. 
-
-
-#### 3. Specify a service principal for an AKS cluster
+#### 2.a Specify a service principal for an AKS cluster
 
 ```
 az aks create \
@@ -119,4 +116,16 @@ az aks create \
     --name myAKSCluster \
     --service-principal <appId> \
     --client-secret <password>
+ ```   
+    (or)
+    
+### 2.b Delegate access to other Azure resources
+
 ```
+az role assignment create --assignee <appId> --scope <resourceScope> --role Contributor
+
+```
+
+### AKS-managed Azure Active Directory
+
+1. [Azure AD](https://docs.microsoft.com/en-us/azure/aks/managed-aad)
