@@ -16,7 +16,7 @@
 
 ```shell
 #  Create or update the kubeconfig file for your cluster:
-aws eks --region region update-kubeconfig --name cluster_name
+aws eks update-kubeconfig --region <region> --name <cluster_name>
 
 ```
 
