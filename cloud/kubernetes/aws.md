@@ -19,3 +19,9 @@
 aws eks --region region update-kubeconfig --name cluster_name
 
 ```
+
+## Verify ALB Ingress Controller logs
+
+```
+kubectl logs -f $(kubectl get po -n kube-system | egrep -o 'alb-ingress-controller-[A-Za-z0-9-]+' ) -n kube-system
+```
