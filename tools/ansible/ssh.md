@@ -4,7 +4,8 @@
 1. Install SSH Client
 2. Install `pywinrm` if the target OS is windows
 3. Install required collection if rquired. Ex `ansible-galaxy collection install community.general`. 
-You can also include it in a requirements.yml file and install it via ansible-galaxy collection install -r requirements.yml using the format:
+You can also include it in a `requirements.yml` file and install it via `ansible-galaxy collection install -r requirements.yml` using the format:
+
 ```yml
 collections:
 - name: community.general
