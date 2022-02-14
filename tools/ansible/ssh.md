@@ -3,7 +3,14 @@
 ## SSH Configuration in Contal Plane Machine
 1. Install SSH Client
 2. Install `pywinrm` if the target OS is windows
-3. 
+3. Install required collection if rquired. Ex `ansible-galaxy collection install community.general`. 
+You can also include it in a requirements.yml file and install it via ansible-galaxy collection install -r requirements.yml using the format:
+```yml
+collections:
+- name: community.general
+```
+
+4.  
 ## SSH Connection in the target VM
 
 1. Open the port `22` and port HTTP: 5985, HTTPS: `5986` (5985, `5986` for WinRM) in target windows OS firewall 
