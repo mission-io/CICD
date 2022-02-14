@@ -12,6 +12,12 @@
 3. Install the `OpenSSH` in target OS
 4. Run the `OpenSSH` service in the target OS
 5. connect using `ssh username@hostname`. Ex. ssh `admin@192.168.0.1` (or) `ssh -i key.pem username@hostname`
+6. To Allow Unencrypted Password do the following command (Not Recomended)
+```shell
+Set-Item -Path WSMan:\localhost\Service\Auth\Basic -Value $true
+winrm set winrm/config/service '@{AllowUnencrypted="true"}'
+```
+ 7. 
 
 ## The passwordless connection between bitbucket repo and EC2.
 
