@@ -17,6 +17,9 @@ collections:
 1. Open the port `80`/`443`, port `22` and port HTTP: 5985, HTTPS: `5986` (`5985`, `5986` for WinRM) in target windows OS firewall 
     Configure [WinRM](https://www.visualstudiogeeks.com/devops/how-to-configure-winrm-for-https-manually) if the target machine is Windows
 2. Open the port `80`/`443`, port `22` and port HTTP: 5985, HTTPS: `5986` (`5985`, `5986` for WinRM) in Cloud Provider `Security Group` / `Networking` with name `WINRM-HTTP(S)`.
+    
+    Note: `SSH` uses `22` and `WinRM` uses `5985` for `HTTP` and `5986` for `HTTPS`
+  
 3. Install the `OpenSSH` in target OS
 4. Run the `OpenSSH` service in the target OS
 5. To Allow Unencrypted Password do the following command (Not Recomended)
