@@ -29,6 +29,10 @@ winrm set winrm/config/service '@{AllowUnencrypted="true"}'
 ```
 6. connect using `ssh username@hostname`. Ex. ssh `admin@192.168.0.1` (or) `ssh -i key.pem username@hostname`
 
+## Troubleshooting 
+
+1. [Ref. 1](https://medium.com/@deepak.bhaskaran/getting-started-with-ansible-and-windows-f2eb21ffe34f)
+
 ## The passwordless connection between bitbucket repo and EC2.
 
 To generate a new SSH key pair
