@@ -14,9 +14,9 @@ collections:
 4.  
 ## SSH Connection in the target VM
 
-1. Open the port `22` and port HTTP: 5985, HTTPS: `5986` (5985, `5986` for WinRM) in target windows OS firewall 
+1. Open the port `80`/`443`, port `22` and port HTTP: 5985, HTTPS: `5986` (`5985`, `5986` for WinRM) in target windows OS firewall 
     Configure [WinRM](https://www.visualstudiogeeks.com/devops/how-to-configure-winrm-for-https-manually) if the target machine is Windows
-2. Open the port `22` and port HTTP: 5985, HTTPS: `5986` (5985, `5986` for WinRM) in Cloud Provider `Security Group` / `Networking`.
+2. Open the port `80`/`443`, port `22` and port HTTP: 5985, HTTPS: `5986` (`5985`, `5986` for WinRM) in Cloud Provider `Security Group` / `Networking` with name `WINRM-HTTP(S)`.
 3. Install the `OpenSSH` in target OS
 4. Run the `OpenSSH` service in the target OS
 5. connect using `ssh username@hostname`. Ex. ssh `admin@192.168.0.1` (or) `ssh -i key.pem username@hostname`
