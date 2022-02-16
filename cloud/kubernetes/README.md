@@ -7,6 +7,8 @@ kubectl exec -it <pod-name> -- [sh | bin/sh | bin/bash]
 
 ```
 
+## Kubernetes Deployment [Strategies](https://auth0.com/blog/deployment-strategies-in-kubernetes/)
+
 [Troubleshooting Kubernetes Deployments](https://learnk8s.io/troubleshooting-deployments)
 
 # ubuntu Non-Privileges User
