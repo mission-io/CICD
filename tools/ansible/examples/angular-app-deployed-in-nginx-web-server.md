@@ -1,4 +1,6 @@
-# Angular Application Deployed in NGINX Web Server (Target OS is Windows)
+# Angular Application Deployed in NGINX Web Server 
+
+(Target OS is Windows)
 
 ## Covered in this document
 
@@ -13,6 +15,8 @@
 ## Todo: 
 
 1. Open the port in target machine security firewall
+
+## `playbook.yml` file 
 
 ```yml
 - hosts: {{HOSTS}}
